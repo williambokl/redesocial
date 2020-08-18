@@ -15,13 +15,15 @@ class UserController {
             .split('-')
             .map((item,indice) => item - indice % 2)
         );
+
+        console.log(this._birthdate.value);
        
         console.log(data);
 
         if(this._password.value != this._confpassword.value){
             return alert('Senhas não compativeis entre si!');
         }
-        let newUser = new User (this._name.value, this._email.value, this._password.value, data);
+        let newUser = new User (this._name.value, this._email.value, this._password.value, this._birthdate.value);
         console.log(data);
         console.log(newUser);
         
@@ -33,7 +35,7 @@ class UserController {
     
         // Define what happens in case of error
         enviarCadastro.addEventListener( "error", function( event ) {
-            alert( 'Oops! Something went wrong.' );
+            alert( 'Opa, não consegui enviar esses dados!' );
         } );
 
         // Set up our request

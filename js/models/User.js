@@ -4,7 +4,7 @@ class User {
         this._name = name;
         this._email = email;
         this._password = password;
-        this._birthdate = new Date(birthdate);
+        this._birthdate = birthdate;
     }
 
     get name () {
@@ -20,7 +20,7 @@ class User {
     }
 
     get birthdate () {
-        return new Date(this._birthdate.getTime());
+        return this._birthdate;
      
     }
 
