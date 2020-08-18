@@ -41,6 +41,14 @@ class UserController {
     
         // The data sent is what the user provided in the form
         enviarCadastro.send(newUser);
+
+        this._name.value = '';
+        this._email.value = '';
+        this._password.value = '';
+        this._confpassword.value = '';
+        this._birthdate.value = '';
+
+        this._name.focus();
         
 
     }
