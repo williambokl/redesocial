@@ -1,5 +1,10 @@
+body {
+    background-color: cornflowerblue;
+}
+
 .form-create-user {
     margin-top: 48px;
+    padding: 48px;;
 }
 
 .form-envia-pong {
