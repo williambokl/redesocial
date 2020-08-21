@@ -3,18 +3,14 @@ class UserController {
     constructor(){
 
         let $ = document.querySelector.bind(document);
-
-        // this._loginUserView = new LoginUserView($('#acessUserView'));
         
-
         this._name = $('#name');
         this._email = $('#email');
         this._password = $('#password');
         this._confpassword = $('#confpassword');
         this._birthdate = $('#birthdate');
-        
-        
-        
+        this._loginUserView = new LoginUserView(document.querySelector('#acessUserView'));
+        this._registerUserView = new RegisterUserView(document.querySelector('#acessUserView'));
         
     }
 

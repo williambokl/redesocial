@@ -13,12 +13,13 @@
 </head>
 <body>
 
-    <div></div>
+    <div id="acessUserViews"></div>
     <div id="mainView"></div>
     <div class="container mt-4"style="background-color: #ffffff;">
         <div class="row align-items-center form-create-user">
             <img class="col-sm" src="img/undraw_profile_details_f8b7.svg" style="max-height: 300px;">
             <div class="col-sm" id="acessUserView">
+                
                 <!-- <form onsubmit="userController.criarCadastro(event)">
                     <h2>Faça seu cadastro</h2>
                     <div class="form-group">
@@ -69,11 +70,10 @@
     <script>
 
         let registerUserView = new RegisterUserView(document.querySelector('#acessUserView'));
-        let loginUserView = new LoginUserView(document.querySelector('#acessUserView'));
-        registerUserView.carregar();
+        registerUserView.carregar();  
 
-        let userController = new UserController();
-
+        let userController = new UserController();        
+        
         let pingController = new PingController();
 
 
