@@ -3,14 +3,17 @@ class UserController {
     constructor(){
 
         let $ = document.querySelector.bind(document);
+
+        // this._loginUserView = new LoginUserView($('#acessUserView'));
+        
+
         this._name = $('#name');
         this._email = $('#email');
         this._password = $('#password');
         this._confpassword = $('#confpassword');
         this._birthdate = $('#birthdate');
-
-        this._registerUserView = new RegisterUserView($('#registerUserView'));
-        this._loginUserView = new LoginUserView($('#registerUserView'));
+        
+        
         
         
     }
@@ -18,13 +21,19 @@ class UserController {
     criarCadastro (event) {
 
         event.preventDefault();
+        console.log(this._name.value)
         this._comparaSenhas();
         console.log(this._comparaSenhas())
         if (this._comparaSenhas() == true) {
             console.log('senhas ok');
             this._enviaDados();
         }else{
-            alert('Senhas não compativeis entre si!');
+            Swal.fire({
+                title: 'Senha errada!',
+                text: 'Suas senhas não são compativéis!',
+                icon: 'error',
+                confirmButtonText: 'Certo'
+            })
             this._password.value = '';
             this._confpassword.value = '';
             this._password.focus();
@@ -48,7 +57,13 @@ class UserController {
         const enviarCadastro = new XMLHttpRequest();
 
         enviarCadastro.addEventListener( "load", function(event) {
-            alert( event.target.responseText );
+            Swal.fire({
+                title: 'Error!',
+                text: event.target.responseText,
+                icon: 'error',
+                confirmButtonText: 'Certo'
+            })
+            
         } );
     
         // Define what happens in case of error

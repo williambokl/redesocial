@@ -1,8 +1,9 @@
 class RegisterUserView extends View{
  
-    template(){
+    template(model){
 
         return `
+    
             <form onsubmit="userController.criarCadastro(event)">
                 <h2>Faça seu cadastro</h2>
                 <div class="form-group">
@@ -27,6 +28,7 @@ class RegisterUserView extends View{
                     <input type="date" class="form-control" id="birthdate">
                 </div>
                 <button style="margin-top:24px;background-color: #6495ed; border-color: #6495ed;" type="submit" class="btn btn-primary mt-4">Cadastrar</button>
+                <button style="margin-top:24px;background-color: #ffffff; color: #6495ed; border-color: #6495ed;" type="submit" class="btn btn-primary mt-4"  onclick="userController.naoTenhoCadastro()">Fazer Cadastro</button>
             </form>
         `
 

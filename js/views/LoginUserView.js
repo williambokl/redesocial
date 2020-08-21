@@ -1,9 +1,9 @@
 class LoginUserView extends View{
  
-    template(){
+    template(model){
 
         return `
-            <form onsubmit="">
+            <form onsubmit="userController.criarCadastro(event)">
                 <h2>Acesse sua conta</h2>
                 <div class="form-group">
                     <label for="email">Email</label>

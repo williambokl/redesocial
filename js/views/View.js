@@ -4,7 +4,7 @@ class View {
         this._elemento = elemento;
     }
 
-    template(){
+    template(model){
 
         throw new Error('Voce deve estanciar o metódo template na classe filha');
     }

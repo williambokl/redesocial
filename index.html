@@ -13,12 +13,13 @@
 </head>
 <body>
 
+    <div></div>
     <div id="mainView"></div>
     <div class="container mt-4"style="background-color: #ffffff;">
         <div class="row align-items-center form-create-user">
             <img class="col-sm" src="img/undraw_profile_details_f8b7.svg" style="max-height: 300px;">
-            <div class="col-sm">
-                <form onsubmit="userController.criarCadastro(event)">
+            <div class="col-sm" id="acessUserView">
+                <!-- <form onsubmit="userController.criarCadastro(event)">
                     <h2>Faça seu cadastro</h2>
                     <div class="form-group">
                         <label for="name">Nome</label>
@@ -42,12 +43,13 @@
                         <input type="date" class="form-control" id="birthdate">
                     </div>
                     <button style="margin-top:24px;background-color: #6495ed; border-color: #6495ed;" type="submit" class="btn btn-primary mt-4">Cadastrar</button>
-                </form>
+                </form> -->
             </div>
         </div>
     </div>
         
     <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
@@ -66,9 +68,16 @@
 
     <script>
 
+        let registerUserView = new RegisterUserView(document.querySelector('#acessUserView'));
+        registerUserView.carregar();
+
+
         let userController = new UserController();
 
+        
+
         let pingController = new PingController();
+
 
     </script>
 
