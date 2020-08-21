@@ -8,6 +8,11 @@ class UserController {
         this._password = $('#password');
         this._confpassword = $('#confpassword');
         this._birthdate = $('#birthdate');
+
+        this._registerUserView = new RegisterUserView($('#registerUserView'));
+        this._loginUserView = new LoginUserView($('#registerUserView'));
+        
+        
     }
 
     criarCadastro (event) {
@@ -24,6 +29,14 @@ class UserController {
             this._confpassword.value = '';
             this._password.focus();
         }    
+    }
+
+    jaTenhoCadastro() {
+        this._loginUserView.carregar();
+    }
+
+    naoTenhoCadastro() {
+        this._registerUserView.carregar();
     }
 
     _enviaDados () {
