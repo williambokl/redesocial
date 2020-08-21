@@ -69,12 +69,10 @@
     <script>
 
         let registerUserView = new RegisterUserView(document.querySelector('#acessUserView'));
+        let loginUserView = new LoginUserView(document.querySelector('#acessUserView'));
         registerUserView.carregar();
 
-
         let userController = new UserController();
-
-        
 
         let pingController = new PingController();
 

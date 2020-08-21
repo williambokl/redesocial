@@ -68,7 +68,12 @@ class UserController {
     
         // Define what happens in case of error
         enviarCadastro.addEventListener( "error", function( event ) {
-            alert( 'Opa, não consegui enviar esses dados!' );
+            Swal.fire({
+                title: 'Error!',
+                text: 'Opa, não consegui enviar esses dados!',
+                icon: 'error',
+                confirmButtonText: 'Certo'
+            });
         } );
 
         // Set up our request
