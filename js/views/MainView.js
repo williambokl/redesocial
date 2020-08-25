@@ -32,7 +32,7 @@ class MainView extends View {
                     </ul>
                 </div>
             </nav>
-    `
+        `
 
     }
 }

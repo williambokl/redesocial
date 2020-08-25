@@ -12,10 +12,9 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-
-    <div id="acessUserViews"></div>
+    
     <div id="mainView"></div>
-    <div class="container mt-4"style="background-color: #ffffff;">
+    <div class="container mt-4"style="background-color: #ffffff; ">
         <div class="row align-items-center form-create-user">
             <img class="col-sm" src="img/undraw_profile_details_f8b7.svg" style="max-height: 300px;">
             <div class="col-sm" id="acessUserView">
@@ -64,14 +63,21 @@
     <script src="js/views/RegisterUserView.js"></script>
     <script src="js/views/MainView.js"></script>
     <script src="js/controllers/MainController.js"></script>
+    <script src="js/models/Login.js"></script>
     <script src="js/views/LoginUserView.js"></script>
     
 
     <script>
 
+        let mainView = new MainView (document.querySelector('#mainView'));
+        mainView.carregar(); 
+
+        let loginUserView = new LoginUserView(document.querySelector('#acessUserView'));
+        loginUserView.carregar();  
+
         let registerUserView = new RegisterUserView(document.querySelector('#acessUserView'));
         registerUserView.carregar();  
-
+        
         let userController = new UserController();        
         
         let pingController = new PingController();
