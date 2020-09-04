@@ -3,7 +3,7 @@ class LoginUserView extends View{
     template(model){
 
         return `
-            <form onsubmit="userController.loginUsuario(event)">
+            <form onsubmit="userController.fazLogin(event)">
                 <h2>Acesse sua conta</h2>
                 <div class="form-group">
                     <label for="email">Email</label>

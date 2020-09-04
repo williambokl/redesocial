@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    
-    <div id="mainView"></div>
+    <!-- <button onclick="userController.enviaNovosDados()" type="button" class="btn btn-primary mt-4">TESTE</button>
+    <div id="mainView"></div> -->
+    <div id="dashboard"></div>
     <div class="container mt-4"style="background-color: #ffffff; ">
         <div class="row align-items-center form-create-user">
             <img class="col-sm" src="img/undraw_profile_details_f8b7.svg" style="max-height: 300px;">
@@ -44,6 +45,7 @@
                     </div>
                     <button style="margin-top:24px;background-color: #6495ed; border-color: #6495ed;" type="submit" class="btn btn-primary mt-4">Cadastrar</button>
                 </form> -->
+                
             </div>
         </div>
     </div>
@@ -54,33 +56,39 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <!-- Arquivos editáveis -->
-    <script src="js/models/User.js"></script>
-    <script src="js/controllers/UserController.js"></script>
-    <script src="js/helpers/DataHelper.js"></script>
-    <script src="js/controllers/PingController.js"></script>
-    <script src="js/views/View.js"></script>
-    <script src="js/views/RegisterUserView.js"></script>
-    <script src="js/views/MainView.js"></script>
-    <script src="js/controllers/MainController.js"></script>
-    <script src="js/models/Login.js"></script>
-    <script src="js/views/LoginUserView.js"></script>
+    <!-- Arquivos edapp/itáveis -->
+    <script src="js/app/models/User.js"></script>
+    <script src="js/app/models/Login.js"></script>
+    <script src="js/app/controllers/UserController.js"></script>
+    <script src="js/app/helpers/DataHelper.js"></script>
+    <script src="js/app/helpers/Bind.js"></script>
+    <script src="js/app/models/Feed.js"></script>
+    <script src="js/app/controllers/PingController.js"></script>
+    <script src="js/app/views/View.js"></script>
+    <script src="js/app/views/FeedView.js"></script>
+    <script src="js/app/views/RegisterUserView.js"></script>
+    <script src="js/app/views/MainView.js"></script>
+    <script src="js/app/controllers/MainController.js"></script>  
+    <script src="js/app/views/LoginUserView.js"></script>
+    <script src="js/app/services/ProxyFactory.js"></script>
+    <script src="js/app/services/HttpService.js"></script>
+    <script src="js/app/services/UserService.js"></script>
     
+    <script>   
 
-    <script>
-
-        let mainView = new MainView (document.querySelector('#mainView'));
-        mainView.carregar(); 
-
-        let loginUserView = new LoginUserView(document.querySelector('#acessUserView'));
-        loginUserView.carregar();  
-
-        let registerUserView = new RegisterUserView(document.querySelector('#acessUserView'));
-        registerUserView.carregar();  
+        let registerUserView = new RegisterUserView (document.querySelector('#acessUserView'));
+        registerUserView.carregar(); 
         
+        let loginUserView = new LoginUserView(document.querySelector('#acessUserView'));
+        loginUserView.carregar();      
+
         let userController = new UserController();        
         
         let pingController = new PingController();
+
+        
+
+        
 
 
     </script>

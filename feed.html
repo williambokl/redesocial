@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rede Social</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- CSS editavel -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-light bg-light justify-content-between" style="border-bottom: 1px solid lightgrey;">
+        <a class="navbar-brand">Rede Social</a>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="button">Mensagens</button>   
+    </nav>
+
+    <div class="container mb-6 bg-light" style="max-width: 580px; padding: 24px;">
+
+        <div class="container align-items-center mb-6" style="background-color: aliceblue; padding: 24px;max-width: 540px; border: 1px solid lightgrey;">
+            <form >
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">O que você quer nos contar?</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button style="margin-top:24px;background-color: #6495ed; border-color: #6495ed;" type="submit" class="btn btn-primary mt-4">Publicar</button>
+            </form>
+        </div>
+            
+
+        <div class="container card mb-6 align-items-center" style="max-width: 540px; margin-top: 48px;">
+            <div class="row no-gutters">
+            <div class="col-md-4" style="padding-top: 8px;">
+                <img src="img/perfil.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                <h5 class="card-title">William</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="#" class="btn btn-primary">Conversar</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+      
+
+      
+     
+        
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!-- Arquivos edapp/itáveis -->
+    <script src="js/app/models/User.js"></script>
+    <script src="js/app/models/Login.js"></script>
+    <script src="js/app/controllers/UserController.js"></script>
+    <script src="js/app/helpers/DataHelper.js"></script>
+    <script src="js/app/helpers/Bind.js"></script>
+    <script src="js/app/models/Feed.js"></script>
+    <script src="js/app/controllers/PingController.js"></script>
+    <script src="js/app/views/View.js"></script>
+    <script src="js/app/views/FeedView.js"></script>
+    <script src="js/app/views/RegisterUserView.js"></script>
+    <script src="js/app/views/MainView.js"></script>
+    <script src="js/app/controllers/MainController.js"></script>  
+    <script src="js/app/views/LoginUserView.js"></script>
+    <script src="js/app/services/ProxyFactory.js"></script>
+    <script src="js/app/services/HttpService.js"></script>
+    <script src="js/app/services/UserService.js"></script>
+    
+    <script>       
+
+        let userController = new UserController();        
+        
+        let pingController = new PingController();
+
+
+    </script>
+
+</body>
+</html>

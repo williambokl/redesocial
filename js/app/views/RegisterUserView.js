@@ -4,7 +4,7 @@ class RegisterUserView extends View{
 
         return `
     
-            <form onsubmit="userController.criarCadastro(event)">
+            <form onsubmit="userController.enviaNovosDados(event)">
                 <h2>Faça seu cadastro</h2>
                 <div class="form-group">
                     <label for="name">Nome</label>
