@@ -1,0 +1,131 @@
+body {
+    background-color: #F2F2F2; 
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-size: 14px;
+}
+
+button {
+    
+    background-color: #5632D9;
+    border: none;
+    padding: 12px 24px;
+    color:white;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #ffffff;
+    border: 1px solid #5632D9;
+    color: #5632D9;
+    cursor: pointer;
+}
+
+.card {
+    border-radius: 16px;
+    background: #F2F2F2;
+    box-shadow:  20px 20px 60px #cecece, 
+                -20px -20px 60px #ffffff;
+    border: 1px solid #EDE9F2;
+}
+
+.card.profile {
+    text-align: center;
+    padding: 24px;
+}    
+
+.card.profile h1{
+    color: #ABA0F2;   
+}
+
+.card.profile img {
+    max-width: 80px;
+    border-radius: 40px;
+}
+
+.form-post {
+    height: 196px;
+    padding: 24px;
+}
+
+.form-post textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #EDE9F2;
+}
+
+.form-post textarea:focus {
+    outline: none;
+    border: 1px solid #ABA0F2 !important;
+}
+
+.category button{
+    float: right;
+    margin-top: 12px;
+    margin-right: 22px;
+    border-radius: 24px;
+    background-color: #F2F2F2;
+    border: 1px solid #5632D9;
+    color: #5632D9;
+    
+}
+
+.category-feed {
+    padding: 24px;
+    height: 40px;
+}
+
+.button-publicar {
+    float: right;
+    margin-top: 24px;
+    clear: both;
+}
+
+
+.post {
+    padding: 24px;
+    height: 172px;
+    margin-top: 24px;
+}
+
+.post img{
+    float: left;
+    width: 80px;
+    border-radius: 40px;
+}
+
+.post .content {
+    float: right;
+    width: 368px;
+    margin-left: 24px;
+}
+
+.post button {
+    float: right;
+    clear: both;
+}
+
+.home {
+    display: flex;
+    /* align-items: center;  */
+    justify-content: center;
+}
+
+.personal {
+    width: 192px;
+    margin-top: 24px;  
+}
+
+.feed{
+    width: 526px;
+    height: 600px;
+    margin: 24px;
+}
+
+.list-mensage{
+    width: 216px;
+    height: 600px;
+    margin-top: 24px;
+}
